@@ -35,18 +35,18 @@ module.exports = function (props) {
                 </div>
                 <form action="/" method="post">
                   <div className="modal-body">
-                    <label>
-                      <p>Title Post</p>
+                    <label className="title-text">
+                      Title Post
                       <input name="createTitle" className="form-control" type="text" id="modalTitle" />
                     </label>
-                    <label>
-                      <p>Body Post</p>
+                    <label className="title-text">
+                      Body Post
                       <textarea name="createBody" className="form-control" type="text" id="modalBody" />
                     </label>
                   </div>
                   <div className="modal-footer">
                     <button name="modalClose" type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button name="modalSaveChange" type="button" className="btn btn-primary">Save changes</button>
+                    <button name="modalSaveChange" type="submit" className="btn btn-primary">Save changes</button>
                   </div>
                 </form>
               </div>

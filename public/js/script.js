@@ -1,8 +1,7 @@
-console.log('Ok');
-
 const wrapMain = document.querySelector('.wrapMain');
 const modalBodyArea = document.querySelector('#createBody');
 const inputId = document.querySelector('[name = "inputId"]');
+const signInForm = document.querySelector('#signInForm');
 
 wrapMain.addEventListener('click', async (event) => {
   event.preventDefault();
@@ -33,3 +32,20 @@ wrapMain.addEventListener('click', async (event) => {
   // const title = event.target.inputTag.value;
   // console.log('▶ ⇛ title', title);
 });
+
+signInForm.addEventListener('submit', signIn);
+
+async function signIn(event) {
+  event.preventDefault();
+  const formData = new FormData(signInForm);
+  const data = JSON.stringify(Object.fromEntries(formData));
+  const signInres = await fetch('/log/in', {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: data,
+  });
+  console.log('▶ ⇛ signInres', signInres);
+}

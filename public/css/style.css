@@ -1,12 +1,51 @@
+body {
+  background-color: #BBC6C8;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: black;
+}
+
+a:focus {
+  border: none;
+  outline: 0;
+}
+
+a:hover {
+  color: #fdfdfd;
+}
 .header {
-  background-color: rgb(43, 135, 21);
+  background-color: #5BA199;
   display: flex;
   justify-content: center;
+}
+
+.header-text {
   font-family: 'Lobster', cursive;
   font-size: 28px;
   font-weight: 600;
 }
+.title-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
 
+.sign-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+}
+
+.sign-in {
+  margin-right: 10px;
+}
 .icon {
   display: flex;
   justify-content: center;
@@ -46,13 +85,6 @@
 .wrapMain>.container>.row {
   margin-bottom: 20px;
 }
-
-/* .buttonBox,
-.field {
-  display: flex;
-  justify-content: center;
-  margin: 10px auto 10px;
-} */
 
 .buttonBox {
   box-shadow: 0px 10px 14px -7px #276873;
