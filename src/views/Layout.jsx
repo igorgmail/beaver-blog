@@ -25,11 +25,11 @@ module.exports = function Layout({ children }) {
               </div>
               <div className="col-4">
                 <div className="sign-block">
-                  <a href="./" data-bs-toggle="modal" data-bs-target="#signInModal">
+                  <a href="/" data-bs-toggle="modal" data-bs-target="#signInModal">
                     <div className="sign-in">SignIn</div>
                   </a>
                   {' '}
-                  <a href="./" data-bs-toggle="modal" data-bs-target="#signUpModal">
+                  <a href="/" data-bs-toggle="modal" data-bs-target="#signUpModal">
                     <div className="sign-up">SignUp</div>
                   </a>
                   <div className="sign-out" />

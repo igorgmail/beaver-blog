@@ -25,7 +25,7 @@ module.exports = function SignUpModal(props) {
                 <input name="setPassword" className="form-control" type="password" />
               </label>
               <div className="form-check">
-                <input className="form-check-input" type="checkbox" id="check1" name="showPassword" />
+                <input className="form-check-input" type="checkbox" id="check2" name="showPassword" />
                 <label className="form-check-label">Show Password</label>
               </div>
             </div>

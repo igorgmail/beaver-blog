@@ -6,6 +6,7 @@ module.exports = function (props) {
     <Layout>
       <div>
         <h1>Main</h1>
+        <a href="/auth">AUTH</a>
         <div className="wrapMain">
           <div className="container">
             <div className="row">

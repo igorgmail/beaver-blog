@@ -7,10 +7,10 @@ module.exports = function SignInModal(props) {
       <div className="modal-dialog modal-dialog-centered">
         <div className="modal-content">
           <div className="modal-header">
-            <h1 className="modal-title fs-5" id="exampleModalLabel">SignUp</h1>
+            <h1 className="modal-title fs-5" id="exampleModalLabel">SignIn</h1>
             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
           </div>
-          <form action="/log/in" method="post" id="signInForm">
+          <form action="/auth/in" method="post" id="signInForm">
             <div className="modal-body">
               <label className="title-text">
                 Email
@@ -24,11 +24,20 @@ module.exports = function SignInModal(props) {
                 <input className="form-check-input" type="checkbox" id="check1" name="showPassword" />
                 <label className="form-check-label">Show Password</label>
               </div>
+
+              <div className="signIn-blockBottom">
+                <a href="/" id="noRegister">
+                  {' '}
+                  <p className="no-auth-text">no account ? register ?</p>
+                </a>
+
+              </div>
+              <div className="modal-footer">
+                <button name="modalClose" type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button name="modalSaveChange" type="submit" className="btn btn-primary">Save changes</button>
+              </div>
             </div>
-            <div className="modal-footer">
-              <button name="modalClose" type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button name="modalSaveChange" type="submit" className="btn btn-primary">Save changes</button>
-            </div>
+
           </form>
         </div>
       </div>

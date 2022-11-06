@@ -44,7 +44,7 @@ a:hover {
 }
 
 .sign-in {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 .icon {
   display: flex;
@@ -59,7 +59,8 @@ a:hover {
 .button-block {
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  width: 85%;
+    padding: 16px 0;
 }
 
 .button-block>*,
@@ -73,9 +74,6 @@ a:hover {
 }
 
 .wrapMain>.container {
-  /* background-color: rgb(98, 97, 95);
-  border: 2px solid black;
-  border-radius: 5px; */
   border-radius: 24px;
   background: #e0e0e0;
   box-shadow: 13px 13px 26px #c3c3c3,
@@ -110,4 +108,10 @@ a:hover {
 .buttonBox:active {
   position: relative;
   top: 1px;
+}
+.no-auth-text {
+  text-align: center;
+  margin-bottom: 0;
+  color: brown;
+  font-weight: 500;
 }

@@ -17,18 +17,24 @@ const PORT = process.env.PORT ?? 3001;
 
 const mainRoute = require('./routes/mainRote');
 const showIdRoute = require('./routes/showIdRoute');
-const loginRoute = require('./routes/login');
+const authRoute = require('./routes/auth');
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../public/')));
-// console.log((path.join(__dirname, '../public/')));
+app.use(session({
+  store: new FileStore(),
+  secret: process.env.SECRET || 'privet bobri',
+  resave: false,
+  saveUninitialized: false,
+  cookie: { secure: false }, // * secure: false настройка для отключения передачи кук только по https
+}));
 
-app.locals.hello = 'Hello world';
-console.log('▶ ⇛ app.locals', app.locals);
+app.locals.agge = '28';
+app.locals.user = 'User';
 
 app.use('/', mainRoute);
-app.use('/log', loginRoute);
+app.use('/auth', authRoute);
 app.use('/showId', showIdRoute);
 app.listen(PORT, () => { console.log('Server is up'); });
